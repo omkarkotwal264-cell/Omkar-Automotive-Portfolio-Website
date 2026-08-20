@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Omkar Kotwal — mechanical engineering student and aspiring frontend developer.">
+  <title>Omkar Kotwal | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="#home">OmkarAutomotive<span>.</span></a>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="#work">Work</a><a href="#cars">Cars</a><a href="#about">About</a><a href="#skills">Skills</a><a
+        href="#contact">Contact</a>
+    </nav>
+    <button class="mode-btn" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> OPEN TO FRONTEND OPPORTUNITIES</p>
+        <h1>I build interfaces<br><em>with a little more</em> character.</h1>
+        <p class="hero-text">I'm Omkar — a mechanical engineering student turning my interest in technology into clean,
+          responsive web experiences with HTML, CSS and JavaScript.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#work">See my work <span>↗</span></a>
+          <a class="btn ghost" href="#contact">Let's talk</a>
+        </div>
+        <div class="quick-stats">
+          <div><strong>01</strong><span>Frontend<br>focus</span></div>
+          <div><strong>03+</strong><span>Projects<br>in progress</span></div>
+          <div><strong>∞</strong><span>Curiosity<br>to learn</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="orb"></div>
+        <div class="speed-card">
+          <div class="speed-top">
+            <span>PROJECT / 01</span>
+            <span>LIVE UI</span></div>
+          <div class="dial">
+            <div class="dial-ring"></div>
+            <div class="needle"></div>
+            <div class="dial-center">128<small>KM/H</small></div>
+          </div>
+          <div class="speed-bottom"><span>DESIGN</span><b>96%</b></div>
+        </div>
+        <div class="floating-chip chip-one">HTML5</div>
+        <div class="floating-chip chip-two">CSS3</div>
+        <div class="floating-chip chip-three">JS</div>
+      </div>
+    </section>
+
+    <div class="marquee">
+      <div>BUILD • LEARN • BREAK • FIX • SHIP • BUILD • LEARN • BREAK • FIX • SHIP •</div>
+    </div>
+
+    <section class="section" id="work">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2>Small projects.<br><em>Real learning.</em></h2>
+        </div>
+        <p class="section-note">I prefer building things I can explain, improve and show — not just collecting tutorial
+          certificates.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-visual automotive"><span class="project-number">01</span>
+            <div class="car-shape">
+              <div class="wheel w1"></div>
+              <div class="wheel w2"></div>
+            </div><span class="visual-label">AUTOMOTIVE HUB</span>
+          </div>
+          <div class="project-info">
+            <p class="tag">HTML • CSS • RESPONSIVE UI</p>
+            <h3>Automotive Innovation Hub</h3>
+            <p>A premium-style automotive interface exploring vehicle technology, specifications and responsive product
+              layouts.</p><button class="text-btn demo-btn" data-project="Automotive Innovation Hub">View concept
+              ↗</button>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-visual task"><span class="project-number">02</span>
+            <div class="mini-window">
+              <div class="mini-line long"></div>
+              <div class="mini-line"></div>
+              <div class="mini-line short"></div>
+              <div class="mini-check">✓</div>
+            </div>
+          </div>
+          <div class="project-info">
+            <p class="tag">JAVASCRIPT • DOM</p>
+            <h3>TaskFlow</h3>
+            <p>A simple task manager concept focused on clean interaction, state changes and useful feedback.</p><button
+              class="text-btn demo-btn" data-project="TaskFlow">View concept ↗</button>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-visual calculator"><span class="project-number">03</span>
+            <div class="calc-display">01 : 28</div>
+            <div class="calc-keys"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="project-info">
+            <p class="tag">JAVASCRIPT • LOGIC</p>
+            <h3>Performance Calculator</h3>
+            <p>A small interactive calculator that turns basic inputs into a useful automotive performance metric.</p>
+            <button class="text-btn demo-btn" data-project="Performance Calculator">View concept ↗</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cars" id="cars">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">FEATURED CARS</p>
+          <h2>Machines that<br><em>inspire me.</em></h2>
+        </div>
+        <p class="section-note">An automotive UI section built to practise cards, responsive grids and JavaScript
+          interactions.</p>
+      </div>
+      <div class="car-container">
+        <article class="car-card">
+          <div class="car-image bmw"><img src="images\bmw-m4.png"><span>01</span><b>BMW</b></div>
+          <div class="car-info">
+            <p class="tag">SPORTS COUPE</p>
+            <h3>BMW M4</h3>
+            <p class="car-description">A performance-focused coupe combining everyday usability with serious driving
+              performance.</p>
+            <div class="specs"><span><b>503</b>HP</span><span><b>3.5</b>SEC</span><span><b>250</b>KM/H</span></div>
+            <div class="car-bottom"><strong>₹1.48 Cr</strong><button class="car-btn details-btn" data-car="BMW M4">View
+                Details ↗</button></div>
+          </div>
+        </article>
+        <article class="car-card">
+          <div class="car-image porsche"><img src="images\porsche.png"><span>02</span><b>PORSCHE</b></div>
+          <div class="car-info">
+            <p class="tag">PERFORMANCE</p>
+            <h3>Porsche 911</h3>
+            <p class="car-description">An iconic sports car known for its distinctive design and engineering character.
+            </p>
+            <div class="specs"><span><b>473</b>HP</span><span><b>3.7</b>SEC</span><span><b>293</b>KM/H</span></div>
+            <div class="car-bottom"><strong>₹1.86 Cr</strong><button class="car-btn details-btn"
+                data-car="Porsche 911">View Details ↗</button></div>
+          </div>
+        </article>
+        <article class="car-card">
+          <div class="car-image amg"><img src="images\mercedes.png"><span>03</span><b>AMG GT</b></div>
+          <div class="car-info">
+            <p class="tag">GRAND TOURER</p>
+            <h3>Mercedes AMG GT</h3>
+            <p class="car-description">A luxury performance car blending aggressive styling with high-end engineering.
+            </p>
+            <div class="specs"><span><b>577</b>HP</span><span><b>3.2</b>SEC</span><span><b>315</b>KM/H</span></div>
+            <div class="car-bottom"><strong>₹2.75 Cr</strong><button class="car-btn details-btn"
+                data-car="Mercedes AMG GT">View Details ↗</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section section" id="about">
+      <div class="about-photo">
+        <div class="photo-placeholder">YOUR<br>PHOTO</div><span class="stamp">MECHANICAL × DIGITAL</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2>Not a perfect developer.<br><em>A growing one.</em></h2>
+        <p>My background is in mechanical engineering, but I enjoy the problem-solving side of technology just as much.
+          Frontend development gives me a place to combine structure, visual thinking and logic.</p>
+        <p>Right now, I'm focusing on getting genuinely comfortable with semantic HTML, CSS layout, responsive design
+          and JavaScript.</p>
+        <div class="signature">— Omkar</div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-head compact">
+        <div>
+          <p class="eyebrow">CURRENT TOOLBOX</p>
+          <h2>Things I'm <em>actually learning.</em></h2>
+        </div>
+      </div>
+      <div class="skill-list">
+        <div class="skill"><span>01</span><b>HTML5</b><small>Semantic structure</small></div>
+        <div class="skill"><span>02</span><b>CSS3</b><small>Layout & responsive UI</small></div>
+        <div class="skill"><span>03</span><b>JavaScript</b><small>DOM & interactions</small></div>
+        <div class="skill"><span>04</span><b>Git / GitHub</b><small>Version control</small></div>
+        <div class="skill"><span>05</span><b>Problem Solving</b><small>Learn by building</small></div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div>
+        <p class="eyebrow">HAVE AN OPPORTUNITY?</p>
+        <h2>Let's build something<br><em>worth opening.</em></h2>
+      </div>
+      <div class="contact-right">
+        <p>I'm looking for a frontend internship or fresher opportunity where I can learn fast, contribute and grow.</p>
+        <a class="big-mail" href="mailto:omkarkotwal264@gmail.com"> omkarkotwal264@gmail.com <span>↗</span></a>
+        <div class="socials"><a href="https://github.com/" target="_blank">GitHub ↗</a><a
+            href="https://www.linkedin.com/in/omkar-kotwal-093756409/" target="_blank">LinkedIn ↗</a><a href="#"
+            onclick="alert('Replace this with your resume PDF link.');return false;">Resume ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Omkar Kotwal</span><span>Built with HTML, CSS & JavaScript — no framework.</span></footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box"><button class="close">×</button>
+      <p class="eyebrow">DETAILS</p>
+      <h3 id="modal-title">Project</h3>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
