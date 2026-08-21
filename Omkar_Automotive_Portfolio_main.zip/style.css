@@ -1,0 +1,997 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --bg: #080808;
+    --surface: #020202;
+    --text: #f8f7f4;
+    --muted: #a7a39a;
+    --line: #33332e;
+    --accent: #d7ff3f
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: Manrope, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden
+}
+
+body.light {
+    --bg: #f3f1e9;
+    --surface: #fff;
+    --text: #151513;
+    --muted: #67665f;
+    --line: #d5d3c9
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+button {
+    font: inherit
+}
+
+.nav {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6vw;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    background: #10100fe8;
+    backdrop-filter: blur(14px);
+    z-index: 10
+}
+
+.light .nav {
+    background: #f3f1e9e8
+}
+
+.brand {
+    font: 700 25px "Space Grotesk"
+}
+
+.brand span {
+    color: var(--accent)
+}
+
+.nav-links {
+    display: flex;
+    gap: 34px;
+    font-size: 13px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .08em
+}
+
+.nav-links a:hover {
+    color: var(--accent)
+}
+
+.mode-btn,
+.menu-btn {
+    background: none;
+    border: 0;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 20px
+}
+
+.menu-btn {
+    display: none
+}
+
+.hero {
+    min-height: calc(100vh - 76px);
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    padding: 7vw 9vw;
+    gap: 5vw
+}
+
+.eyebrow {
+    font: 500 11px/1.2 "DM Mono";
+    letter-spacing: .16em;
+    color: var(--muted);
+    margin-bottom: 24px
+}
+
+.dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 8px;
+    box-shadow: 0 0 18px var(--accent)
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Space Grotesk";
+    line-height: .98;
+    letter-spacing: -.045em
+}
+
+h1 {
+    font-size: clamp(48px, 7vw, 94px)
+}
+
+h1 em,
+h2 em {
+    font-style: normal;
+    color: var(--accent)
+}
+
+.hero-text {
+    max-width: 590px;
+    color: var(--muted);
+    margin: 30px 0;
+    font-size: 16px
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 60px
+}
+
+.btn {
+    padding: 14px 20px;
+    border: 1px solid var(--line);
+    font-size: 13px;
+    font-weight: 700
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #111;
+    border-color: var(--accent)
+}
+
+.btn.ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent)
+}
+
+.quick-stats {
+    display: flex;
+    gap: 44px
+}
+
+.quick-stats div {
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.quick-stats strong {
+    font: 500 23px "DM Mono"
+}
+
+.quick-stats span {
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 1.25;
+    color: var(--muted);
+    letter-spacing: .08em
+}
+
+.hero-art {
+    min-height: 480px;
+    position: relative;
+    display: grid;
+    place-items: center
+}
+
+.orb {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #d7ff3f55, transparent 58%);
+    filter: blur(5px)
+}
+
+.speed-card {
+    width: min(370px, 80vw);
+    height: 430px;
+    border: 1px solid #414139;
+    background: linear-gradient(145deg, #20201d, #121211);
+    padding: 25px;
+    box-shadow: 0 35px 90px #0008;
+    transform: rotate(4deg);
+    position: relative;
+    z-index: 2
+}
+
+.speed-top,
+.speed-bottom {
+    display: flex;
+    justify-content: space-between;
+    font: 10px "DM Mono";
+    color: #85857b;
+    letter-spacing: .1em
+}
+
+.speed-top span:last-child {
+    color: var(--accent)
+}
+
+.dial {
+    height: 300px;
+    display: grid;
+    place-items: center;
+    position: relative
+}
+
+.dial-ring {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 1px solid #66665b;
+    box-shadow: inset 0 0 0 14px #151513, 0 0 0 1px #282823;
+    position: relative
+}
+
+.dial-ring:after {
+    content: "";
+    position: absolute;
+    inset: 16px;
+    border-radius: 50%;
+    border: 1px dashed #55554d
+}
+
+.needle {
+    width: 90px;
+    height: 2px;
+    background: var(--accent);
+    position: absolute;
+    transform: rotate(-35deg);
+    transform-origin: 0 50%;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 0 12px var(--accent)
+}
+
+.dial-center {
+    position: absolute;
+    text-align: center;
+    font: 600 37px "DM Mono"
+}
+
+.dial-center small {
+    display: block;
+    font-size: 9px;
+    color: #888;
+    letter-spacing: .15em
+}
+
+.speed-bottom b {
+    color: var(--accent)
+}
+
+.floating-chip {
+    position: absolute;
+    background: #25251f;
+    border: 1px solid #45453c;
+    padding: 8px 11px;
+    font: 11px "DM Mono";
+    z-index: 3
+}
+
+.chip-one {
+    top: 17%;
+    left: 8%;
+    transform: rotate(-8deg)
+}
+
+.chip-two {
+    right: 3%;
+    top: 36%;
+    transform: rotate(7deg)
+}
+
+.chip-three {
+    bottom: 14%;
+    left: 10%;
+    transform: rotate(5deg)
+}
+
+.marquee {
+    overflow: hidden;
+    border-block: 1px solid var(--line);
+    white-space: nowrap;
+    color: #74736c;
+    font: 500 13px "DM Mono";
+    padding: 15px 0
+}
+
+.marquee div {
+    animation: marquee 25s linear infinite
+}
+
+@keyframes marquee {
+    to {
+        transform: translateX(-40%)
+    }
+}
+
+.section {
+    padding: 130px 9vw
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: end;
+    margin-bottom: 55px
+}
+
+.section-head h2 {
+    font-size: clamp(40px, 5vw, 68px)
+}
+
+.section-note {
+    max-width: 360px;
+    color: var(--muted);
+    font-size: 13px
+}
+
+.compact {
+    margin-bottom: 35px
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1.35fr .8fr;
+    gap: 18px
+}
+
+.project-card,
+.car-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    transition: .3s
+}
+
+.project-card:hover,
+.car-card:hover {
+    transform: translateY(-6px);
+    border-color: #5d5d53
+}
+
+.featured {
+    grid-row: span 2
+}
+
+.project-visual {
+    height: 260px;
+    position: relative;
+    overflow: hidden
+}
+
+.featured .project-visual {
+    height: 440px
+}
+
+.automotive {
+    background: radial-gradient(circle at 70% 35%, #4e5c1d, transparent 20%), linear-gradient(145deg, #25261e, #11110f)
+}
+
+.task {
+    background: linear-gradient(145deg, #22231f, #141412)
+}
+
+.calculator {
+    background: linear-gradient(145deg, #24241e, #151513)
+}
+
+.project-number {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    font: 11px "DM Mono";
+    color: #aaa99e
+}
+
+.visual-label {
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    font: 10px "DM Mono";
+    color: #aaa99e;
+    letter-spacing: .12em
+}
+
+.car-shape {
+    position: absolute;
+    width: 75%;
+    height: 120px;
+    background: linear-gradient(110deg, #a9c32d, #d7ff3f);
+    border-radius: 70px 100px 25px 20px;
+    left: 13%;
+    top: 45%;
+    transform: skewX(-8deg);
+    box-shadow: 0 20px 60px #d7ff3f22
+}
+
+.car-shape:before {
+    content: "";
+    position: absolute;
+    width: 45%;
+    height: 50px;
+    background: #20231b;
+    top: -34px;
+    left: 30%;
+    border-radius: 80px 70px 0 0
+}
+
+.wheel {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #0c0c0b;
+    border: 10px solid #383832;
+    bottom: -28px
+}
+
+.w1 {
+    left: 14%
+}
+
+.w2 {
+    right: 14%
+}
+
+.mini-window {
+    width: 55%;
+    height: 60%;
+    border: 1px solid #55554d;
+    margin: 12% auto;
+    padding: 20px;
+    position: relative
+}
+
+.mini-line {
+    height: 7px;
+    background: #505049;
+    margin: 14px 0;
+    width: 70%
+}
+
+.mini-line.long {
+    width: 90%;
+    background: var(--accent)
+}
+
+.mini-line.short {
+    width: 45%
+}
+
+.mini-check {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    color: var(--accent);
+    font-size: 25px
+}
+
+.calc-display {
+    width: 62%;
+    margin: 15% auto 20px;
+    border: 1px solid #55554d;
+    padding: 15px;
+    font: 24px "DM Mono";
+    color: var(--accent)
+}
+
+.calc-keys {
+    width: 62%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px
+}
+
+.calc-keys i {
+    height: 24px;
+    border: 1px solid #3f3f38
+}
+
+.project-info {
+    padding: 25px
+}
+
+.tag {
+    font: 10px "DM Mono";
+    color: var(--accent);
+    letter-spacing: .1em;
+    margin-bottom: 12px
+}
+
+.project-info h3,
+.car-info h3 {
+    font-size: 27px;
+    margin-bottom: 10px
+}
+
+.project-info p:not(.tag),
+.car-description {
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 570px
+}
+
+.text-btn {
+    background: none;
+    border: 0;
+    color: var(--text);
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 4px
+}
+
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.car-image {
+    height: 177px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.car-image:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, #0000, #0009)
+}
+
+.car-image>* {
+    position: relative
+}
+
+.car-image span {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    font: 11px "DM Mono";
+    color: #bbb
+}
+
+.car-image b {
+    font: 700 34px "Space Grotesk";
+    letter-spacing: -.05em
+}
+
+.bmw {
+    background: radial-gradient(circle at 70% 45%, #63761f, #1b1c17 42%, #0c0c0b)
+}
+
+.porsche {
+    background: radial-gradient(circle at 60% 35%, #6b3c1d, #211713 45%, #0c0b0a)
+}
+
+.amg {
+    background: radial-gradient(circle at 65% 35%, #3b4c54, #161c1e 45%, #090a0a)
+}
+
+.car-info {
+    padding: 25px
+}
+
+.specs {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin: 22px 0;
+    padding: 15px 0
+}
+
+.specs span {
+    color: var(--muted);
+    font: 10px "DM Mono";
+    text-align: center
+}
+
+.specs b {
+    display: block;
+    color: var(--text);
+    font-size: 17px;
+    margin-bottom: 4px
+}
+
+.car-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.car-bottom strong {
+    font: 500 18px "DM Mono"
+}
+
+.car-btn {
+    background: var(--accent);
+    color: #10100f;
+    border: 0;
+    padding: 11px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.car-btn:hover {
+    opacity: .8
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 9vw;
+    background: var(--surface);
+    border-block: 1px solid var(--line)
+}
+
+.photo-placeholder {
+    width: 250px;
+    height: 330px;
+    border: 1px solid #626258;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font: 700 28px "Space Grotesk";
+    color: #67675d;
+    transform: rotate(-4deg);
+}
+
+.about-photo img {
+    width: 250px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 4px;
+    transform: rotate(4deg);
+}
+
+.stamp {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    background: var(--accent);
+    color: #10100f;
+    padding: 8px 12px;
+    font: 10px "DM Mono";
+    transform: rotate(-4deg)
+}
+
+.about-copy {
+    align-self: center;
+    max-width: 650px
+}
+
+.about-copy h2 {
+    font-size: clamp(42px, 5vw, 67px);
+    margin-bottom: 30px
+}
+
+.about-copy p {
+    color: var(--muted);
+    margin: 14px 0;
+    font-size: 15px
+}
+
+.signature {
+    font: 500 25px "Space Grotesk";
+    margin-top: 35px
+}
+
+.skills-section {
+    padding-bottom: 90px
+}
+
+.skill-list {
+    border-top: 1px solid var(--line)
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    align-items: center;
+    padding: 23px 0;
+    border-bottom: 1px solid var(--line)
+}
+
+.skill span {
+    font: 10px "DM Mono";
+    color: var(--muted)
+}
+
+.skill b {
+    font: 600 20px "Space Grotesk"
+}
+
+.skill small {
+    color: var(--muted);
+    font-size: 12px
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    background: var(--accent);
+    color: #10100f
+}
+
+.contact .eyebrow {
+    color: #3d451f
+}
+
+.contact h2 {
+    font-size: clamp(45px, 5vw, 70px)
+}
+
+.contact h2 em {
+    color: #10100f
+}
+
+.contact-right {
+    align-self: end
+}
+
+.contact-right>p {
+    max-width: 450px;
+    font-size: 14px;
+    margin-bottom: 30px
+}
+
+.big-mail {
+    display: block;
+    font: 600 clamp(18px, 2.2vw, 28px) "Space Grotesk";
+    border-bottom: 1px solid #777f43;
+    padding-bottom: 13px
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    font: 11px "DM Mono"
+}
+
+.socials a:hover {
+    text-decoration: underline
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 9vw;
+    color: #77766e;
+    font: 10px "DM Mono";
+    gap: 20px
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #000b;
+    display: none;
+    place-items: center;
+    z-index: 30;
+    padding: 20px
+}
+
+.modal.open {
+    display: grid
+}
+
+.modal-box {
+    max-width: 540px;
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 40px;
+    position: relative
+}
+
+.modal-box h3 {
+    font-size: 36px;
+    margin-bottom: 18px
+}
+
+.modal-box p {
+    color: var(--muted)
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px
+}
+
+.detail-grid div {
+    border: 1px solid var(--line);
+    padding: 13px
+}
+
+.detail-grid b {
+    display: block;
+    color: var(--text);
+    font: 17px "DM Mono"
+}
+
+.close {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    background: none;
+    border: 0;
+    color: var(--text);
+    font-size: 28px;
+    cursor: pointer
+}
+
+@media(max-width:850px) {
+    .nav {
+        padding: 0 5vw
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: 16px
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        padding: 25px 5vw;
+        flex-direction: column;
+        gap: 18px;
+        border-bottom: 1px solid var(--line)
+    }
+
+    .nav-links.open {
+        display: flex
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 70px 7vw
+    }
+
+    .hero-art {
+        min-height: 420px
+    }
+
+    .section {
+        padding: 90px 7vw
+    }
+
+    .section-head {
+        display: block
+    }
+
+    .section-note {
+        margin-top: 20px
+    }
+
+    .project-grid,
+    .car-container {
+        grid-template-columns: 1fr
+    }
+
+    .featured {
+        grid-row: auto
+    }
+
+    .featured .project-visual {
+        height: 330px
+    }
+
+    .about-section,
+    .contact {
+        grid-template-columns: 1fr
+    }
+
+    .about-photo {
+        min-height: 380px
+    }
+
+    .contact-right {
+        margin-top: 30px
+    }
+
+    footer {
+        padding: 25px 7vw;
+        display: block
+    }
+
+    footer span {
+        display: block;
+        margin: 5px 0
+    }
+}
+
+@media(max-width:500px) {
+    h1 {
+        font-size: 47px
+    }
+
+    .quick-stats {
+        gap: 18px
+    }
+
+    .quick-stats strong {
+        font-size: 18px
+    }
+
+    .quick-stats span {
+        font-size: 8px
+    }
+
+    .speed-card {
+        height: 380px
+    }
+
+    .dial {
+        height: 260px
+    }
+
+    .dial-ring {
+        width: 190px;
+        height: 190px
+    }
+
+    .section {
+        padding: 75px 6vw
+    }
+
+    .skill {
+        grid-template-columns: 40px 1fr
+    }
+
+    .skill small {
+        display: none
+    }
+}
